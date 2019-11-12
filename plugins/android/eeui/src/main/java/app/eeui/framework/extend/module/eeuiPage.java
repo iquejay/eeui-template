@@ -360,7 +360,7 @@ public class eeuiPage {
                 Log.d(TAG, "cachePage assetsSuccess: " + url);
                 mOnCachePageCallback.success(resParams, tempUrl);
             }else{
-                Map<String, Object> data = new HashMap<>();
+                /*Map<String, Object> data = new HashMap<>();
                 data.put(WXSDKInstance.BUNDLE_URL, url);
                 data.put("params", params);
                 data.put("setting:cache", cache);
@@ -393,7 +393,9 @@ public class eeuiPage {
                     public void complete() {
 
                     }
-                });
+                }); */
+                // http不缓存
+                mOnCachePageCallback.success(resParams, url);
             }
         }else{
             Log.d(TAG, "cachePage nocache: " + url);
