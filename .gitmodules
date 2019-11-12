@@ -1,0 +1,6 @@
+[submodule "plugins/weex-pdf"]
+	path = plugins/weex-pdf
+	url = https://github.com/iquejay/weex-pdf
+[submodule "plugins/GCanvas"]
+	path = plugins/GCanvas
+	url = https://github.com/iquejay/GCanvas
