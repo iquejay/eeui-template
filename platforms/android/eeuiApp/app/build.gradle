@@ -58,6 +58,11 @@ android {
         checkReleaseBuilds false
         abortOnError false
     }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
 }
 
 dependencies {
@@ -79,4 +84,11 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxandroid:2.1.0"
     //
     implementation project(":eeui")
+    //  gcanvas
+    implementation(name: 'core-release', ext: 'aar')
+    implementation(name: 'bridge_spec-release', ext: 'aar')
+    implementation(name: 'bridge_adapter-release', ext: 'aar')
+    implementation(name: 'gcanvas_library-release', ext: 'aar')
+    implementation(name: 'weex_bridge-release', ext: 'aar')
+    implementation(name: 'gcanvas_imageloader_fresco-release', ext: 'aar')
 }

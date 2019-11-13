@@ -34,7 +34,8 @@
 
     <!-- 添加快捷方式 -->
     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
-
+    <!--  OpenGL ES features for GCanvas-->
+    <uses-feature android:glEsVersion="0x00020000" />
     <application
         android:name="app.eeui.playground.MyApplication"
         android:allowBackup="false"
