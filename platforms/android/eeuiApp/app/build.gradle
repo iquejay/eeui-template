@@ -63,6 +63,11 @@ android {
             dirs 'libs'
         }
     }
+    packagingOptions {
+        //  More than one file was found with OS independent path 'lib/armeabi-v7a/libc++_shared.so'
+        pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+        pickFirst 'lib/arm64-v8a/libc++_shared.so'
+    }
 }
 
 dependencies {
@@ -85,7 +90,6 @@ dependencies {
     //
     implementation project(":eeui")
     //  gcanvas
-    implementation(name: 'core-release', ext: 'aar')
     implementation(name: 'bridge_spec-release', ext: 'aar')
     implementation(name: 'bridge_adapter-release', ext: 'aar')
     implementation(name: 'gcanvas_library-release', ext: 'aar')
